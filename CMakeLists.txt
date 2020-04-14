@@ -70,13 +70,6 @@ endif()
 set(LIB_POSTFIX "${SUITESPARSE_LIB_POSTFIX}" CACHE STRING "suffix for 32/64 inst dir placement")
 mark_as_advanced(LIB_POSTFIX)
 
-# We want libraries to be named "libXXX" and "libXXXd" in all compilers:
-# ------------------------------------------------------------------------
-set(CMAKE_DEBUG_POSTFIX  "d")
-IF(MSVC)
-	set(SP_LIB_PREFIX "lib")  # Libs are: "libXXX"
-ENDIF(MSVC)
-
 ## check if we can build metis
 SET(BUILD_METIS_DEFAULT ON)
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/SuiteSparse/metis-5.1.0/CMakeLists.txt")
