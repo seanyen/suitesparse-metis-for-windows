@@ -2,7 +2,6 @@
 get_filename_component(_SuiteSparse_SELF_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 get_filename_component(_SuiteSparse_PREFIX "${_SuiteSparse_SELF_DIR}" PATH)
 get_filename_component(_SuiteSparse_PREFIX "${_SuiteSparse_PREFIX}" PATH)
-get_filename_component(_SuiteSparse_PREFIX "${_SuiteSparse_PREFIX}" PATH)
 
 find_package(LAPACK CONFIG)
 if (NOT LAPACK_FOUND) # Load the LAPACK package with which we were built.
